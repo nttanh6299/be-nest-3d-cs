@@ -6,12 +6,12 @@ import { AccessControlModule } from "nest-access-control";
 import { MongooseModule, MongooseModuleAsyncOptions } from "@nestjs/mongoose";
 import { ServeStaticModule } from "@nestjs/serve-static";
 
-import { ConfigModule } from "modules/config/config.module";
-import { AuthModule } from "modules/auth/auth.module";
-import { ProfileModule } from "modules/profile/profile.module";
-import { WinstonModule } from "modules/winston/winston.module";
-import { CategoryModule } from "modules/category/category.module";
-import { PaintModule } from "modules/paint/paint.module";
+import { ConfigModule } from "../config/config.module";
+import { AuthModule } from "../auth/auth.module";
+import { ProfileModule } from "../profile/profile.module";
+import { WinstonModule } from "../winston/winston.module";
+import { CategoryModule } from "../category/category.module";
+import { PaintModule } from "../paint/paint.module";
 
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";

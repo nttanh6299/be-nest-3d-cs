@@ -1,7 +1,7 @@
 import { Module } from "@nestjs/common";
 import { MongooseModule } from "@nestjs/mongoose";
 import { HttpModule } from "@nestjs/axios";
-import { ConfigModule } from "modules/config/config.module";
+import { ConfigModule } from "../config/config.module";
 import { CategoryService } from "./category.service";
 import { CategoryController } from "./category.controller";
 import { Category } from "./category.model";

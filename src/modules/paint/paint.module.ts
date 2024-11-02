@@ -1,7 +1,7 @@
 import { Module } from "@nestjs/common";
 import { MongooseModule } from "@nestjs/mongoose";
 import { HttpModule } from "@nestjs/axios";
-import { ConfigModule } from "modules/config/config.module";
+import { ConfigModule } from "../config/config.module";
 import { PaintService } from "./paint.service";
 import { PaintController } from "./paint.controller";
 import { Paint } from "./paint.model";

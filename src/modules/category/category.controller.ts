@@ -11,7 +11,7 @@ import { firstValueFrom, map } from "rxjs";
 import { HttpService } from "@nestjs/axios";
 import { ACGuard, UseRoles } from "nest-access-control";
 import { ApiBearerAuth, ApiResponse, ApiTags } from "@nestjs/swagger";
-import { ConfigService } from "modules/config/config.service";
+import { ConfigService } from "../config/config.service";
 import { CategoryService } from "./category.service";
 import { ICategory } from "./category.model";
 import { CreateCategoryPayload } from "./payload/create.category.payload";
