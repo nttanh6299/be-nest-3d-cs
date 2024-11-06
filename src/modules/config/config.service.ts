@@ -43,6 +43,7 @@ export class ConfigService {
         scheme: [/https?/],
       }),
       APP_CORS: joi.string().required(),
+      ENV: joi.string().required(),
       WEBTOKEN_SECRET_KEY: joi.string().required(),
       WEBTOKEN_EXPIRATION_TIME: joi.number().default(1800),
       DB_URL: joi.string().regex(/^mongodb/),

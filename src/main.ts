@@ -32,14 +32,18 @@ export const SWAGGER_API_CURRENT_VERSION = "1.0";
     logger: console,
   });
   const configService = app.get(ConfigService);
-  const options = new DocumentBuilder()
-    .setTitle(SWAGGER_API_NAME)
-    .setDescription(SWAGGER_API_DESCRIPTION)
-    .setVersion(SWAGGER_API_CURRENT_VERSION)
-    .addBearerAuth()
-    .build();
-  const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup(SWAGGER_API_ROOT, app, document);
+
+  if (configService.get("ENV") === "development") {
+    const options = new DocumentBuilder()
+      .setTitle(SWAGGER_API_NAME)
+      .setDescription(SWAGGER_API_DESCRIPTION)
+      .setVersion(SWAGGER_API_CURRENT_VERSION)
+      .addBearerAuth()
+      .build();
+    const document = SwaggerModule.createDocument(app, options);
+    SwaggerModule.setup(SWAGGER_API_ROOT, app, document);
+  }
+
   app.enableCors({
     origin: configService.get("APP_CORS").split(","),
     methods: ["GET", "POST"],
